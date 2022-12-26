@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="cssExterno.css">
+	<title>Curso de JavaScript</title>
+</head>
+
+<body>
+
+	<h1>Curso de Js</h1>
+	<ul>
+		<li><a href="eventos.html">Eventos</a></li>
+		<li><a href="dom.html">DOM</a></li>
+	</ul>
+	<div>
+		<h3>Funções nativas que ajudam</h3>
+		<ul>
+			<li><span class="codigo">alert('texto')</span> Exibe um PoupUp</li>
+			<li><span class="codigo">prompt('texto')</span> Exibe um PoupUp com uma caixa de texto</li>
+			<li><span class="codigo">document.write('texto') Exibe textos direto no body</span></li>
+		</ul>	
+	</div>
+
+	<hr>
+	<div>
+		<h3>Variaveis</h3>
+		<p> Variáveis funcionam como um repositório onde vc pode armazenar valores, dados, etc</p>
+		<p>Tipos de variáveis: <span class="codigo">string / number / boolean</span></p>
+
+		<h3>Regras de declaração:</h3>
+		<ul>
+			<li>Iniciadas apenas com letras ou _</li>
+			<li>Não podem ter caracteres especiais</li>
+			<li>Não podem ser iguais as palavras reservadas da linguagem</li>
+			<li>Varáveis são case sensitive</li>
+		</ul>
+
+		<h3>Declaração:</h3>
+
+		<p>A declaração começa com a palavra reservada <span class="codigo">var</span> seguida pelo nome da variável depois o sinal de = (igual) seguido pelo valor que deseja atribuir a variável, como abaixo</p>
+		<p><span class="codigo">var</span> <span class="textoblue">SenhaDoPc</span> <span class="textored">=</span><span class="textopurple"> 56155</span> </p>
+	</div>
+
+	<div>
+		<h3>Concatenação</h3>
+		<p>Usando variavéis e possivel combinalas (concatenar) com outros blocos de código, string, etc
+		Com esse recurso torna-se uma frase dinamica, como no exemplo abaixo, Para ver acontecendo tire o comentario da variavel nome no código</p>
+
+		<script>
+			/*var nome = prompt('Digite seu nome aqui');
+*/
+			document.write('Olá ' + nome + ' Estamos felizes em ter você aqui')
+		</script>
+	</div>
+	
+
+</body>
+</html>

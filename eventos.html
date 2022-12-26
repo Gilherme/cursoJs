@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="cssExterno.css">
+	<title>Curso JS - Eventos</title>
+	<style>
+		.azul{
+			color: blue;
+		}
+		.bg-blue{background: blue;}
+		.bg-red{background: red;}
+		ul.eventos{
+			list-style-type: none;
+			overflow: hidden;
+			color: white;
+		}ul.eventos li{
+			margin: 0 5px;
+			float: left;
+			padding: 40px 40px;
+		}
+		ul.eventos{
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<span>EVENTOS</span>
+		<ul>
+			<li><a href="">Moue</a></li>
+			<li><a href="">Teclado</a></li>
+			<li><a href="">Janela</a></li>
+			<li><a href="">Formulário</a></li>
+		</ul>
+	</div>
+
+	<div>
+		<span>EVENTOS COM O MOUSE</span>
+		<ul class="eventos">
+			<li id="x1" onclick="acao()" class="bg-blue">onclick</li>
+			<li id="x2" ondblclick="acao1()" class="bg-blue">ondblclick</li>
+			<li id="x3" onmouseup="acao2()" class="bg-blue">onmouseup</li>
+			<li id="x4" onmouseover="acao3()" class="bg-blue">onmouseover</li>
+			<li id="x5" onmouseout="acao4()" class="bg-blue">onmouseout</li>
+		</ul>
+		<ul class="eventos2">
+			<li>Onclick: Quando é clicado</li>
+			<li>Odblclick: Quando é clicado 2 vezes</li>
+			<li>Onmouseup: Quando o click é liberado</li>
+			<li>Onmouseover: Quando o Cursor do mouse passa por cima</li>
+			<li>Onmouseout: Quando o Cursor deixa a area</li>
+		</ul>
+	</div>
+
+
+
+	
+</body>
+<script>
+	
+	function acao(){
+		document.getElementById('x1').className = "bg-red";
+	}function acao1(){
+		document.getElementById('x2').className = "bg-red";
+	}function acao2(){
+		document.getElementById('x3').className = "bg-red";
+	}function acao3(){
+		document.getElementById('x4').className = "bg-red";
+	}function acao4(){
+		document.getElementById('x5').className = "bg-red";
+	}
+</script>
+</html>
