@@ -5,7 +5,8 @@
 
 
 /* Cores de texto */
-
+.text-gray{color: gray;}
+.text-white{color: white;}
 .text-purple{color: purple;}
 .text-blue{color: darkblue;}
 .text-red{color: red;}
@@ -17,6 +18,9 @@ h3{margin-bottom: 12px;}
 
 /************************  - EVENTOS  - *****************************/
 
+.font-20{
+	font-size: 20px;
+}
 
 .eventosMouse{
 	text-align: center;
