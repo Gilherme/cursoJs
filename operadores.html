@@ -8,37 +8,105 @@
 </head>
 
 <body>
-
-	<h1>Curso de Js</h1>
-	<ul>
-		<li><a href="eventos.html">Eventos</a></li>
-		<li><a href="dom.html">DOM</a></li>
-		<li><a href="desafio.html">desafio abc</a></li>
-		<li><a href="ifElse.html">if else</a></li>
-		<li><a href="operadores.html">Operadores</a></li>
-	</ul>
-	<div><hr>
-
-		<ul>
-			<li>Operadores de comparação</li>
-			<li>Operadores aritiméticos</li>
-		</ul>
 	
-	<div>
-		<h1>Operadores de comparação</h1>
-
+	<div id="container">
+		
+		<h1>Curso de Js</h1>
 		<ul>
-			<li class="text-purple"> Igual (<span class="text-red">==</span>) Verifica se os valores são <span class="text-red"> iguais </span></li>
-			<li class="text-purple"> Idêntico (<span class="text-red">===</span>) Verifica se os valores são <span class="text-red"> iguais e do mesmo tipo </span></li>
-			<li class="text-purple"> Diferente (<span class="text-red">!=</span>) Verifica se os valores são <span class="text-red"> diferentes </span></li>
-			<li class="text-purple"> Não idêntico (<span class="text-red">!==</span>) Verifica se os valores são <span class="text-red"> diferente e de tipo diferente </span></li>
-			<li class="text-purple"> Menor (<span class="text-red"><</span>) Verifica se o valor da esquerda é <span class="text-red"> menor  </span> que o da direita</li>
-			<li class="text-purple"> Maior (<span class="text-red">></span>) Verifica se o valor da direita é <span class="text-red"> maior </span> que o da direira</li>
-			<li class="text-purple"> Menor ou igual (<span class="text-red"><=</span>) Verifica se o valor da direita é <span class="text-red"> menor ou igual </span> que o da direira</li>
-			<li class="text-purple"> Maior ou igual (<span class="text-red">>=</span>) Verifica se o valor da direita é <span class="text-red"> Maior ou igual </span> que o da direira</li>	
+			<li><a href="eventos.html">Eventos</a></li>
+			<li><a href="dom.html">DOM</a></li>
+			<li><a href="desafio.html">desafio abc</a></li>
+			<li><a href="ifElse.html">if else</a></li>
+			<li><a href="operadores.html">Operadores</a></li>
+		</ul>
+		<div><hr>
+
+			<ul>
+				<li>Operadores de Comparação</li>
+				<li>Operadores Lógicos</li>
+				<li>Operadores Aritiméticos</li>
+			</ul>
+		
+		<div id="container">
+			<h1>Operadores de comparação</h1>
+
+
+			<ul>
+				<li class="text-purple"> Igual (<span class="text-red">==</span>) Verifica se os valores são <span class="text-red"> iguais </span></li>
+				<li class="text-purple"> Idêntico (<span class="text-red">===</span>) Verifica se os valores são <span class="text-red"> iguais e do mesmo tipo </span></li>
+				<li class="text-purple"> Diferente (<span class="text-red">!=</span>) Verifica se os valores são <span class="text-red"> diferentes </span></li>
+				<li class="text-purple"> Não idêntico (<span class="text-red">!==</span>) Verifica se os valores são <span class="text-red"> diferente e de tipo diferente </span></li>
+				<li class="text-purple"> Menor (<span class="text-red"><</span>) Verifica se o valor da esquerda é <span class="text-red"> menor  </span> que o da direita</li>
+				<li class="text-purple"> Maior (<span class="text-red">></span>) Verifica se o valor da direita é <span class="text-red"> maior </span> que o da direira</li>
+				<li class="text-purple"> Menor ou igual (<span class="text-red"><=</span>) Verifica se o valor da direita é <span class="text-red"> menor ou igual </span> que o da direira</li>
+				<li class="text-purple"> Maior ou igual (<span class="text-red">>=</span>) Verifica se o valor da direita é <span class="text-red"> Maior ou igual </span> que o da direira</li>	
+			</ul>
+			<p>Acesse o código para ver testes na pratica</p>
+			<script>
+				
+				var a = 10
+				var b = 0
+				var c = 30
+
+				if( a == '10'){
+					console.log('a é gual a 10')
+				}else{
+					console.log('a não é igual a 10')
+				}
+
+				if(a === '10'){
+					console.log('a é identico a 10')
+				}else{
+					console.log(' A Não é identico a 10')
+				}
+
+				if(a != '10'){
+					console.log('a é diferente de 10')
+				}else{
+					console.log('a não é diferente de 10')
+				}
+
+				if(a !== '10'){
+					console.log('a é estritamente diferente de 10')
+				}else{
+					console.log('a não é estritamente diferente de 10')
+				}
+
+				if(a > b){
+					console.log('a é maior que b')
+				}else{
+					console.log('a não é maior que b')
+				}
+
+				if(c < a){
+					console.log('c é menor que a')
+				}else{
+					console.log('c não é menor que a')
+				}
+
+				if( a <= '10'){
+					console.log('a é menor ou igual a 10')
+				}else{
+					console.log('a não é menor ou igual a 10')
+				}
+
+				if(b >= c){
+					console.log('b é maior ou igual a c')
+				}else{
+					console.log('b não é maior ou igual d')
+				}
+			</script>
+		</div>
+	</div><hr>
+	<div>
+		<h1>Operadores Lógicos</h1>
+		<p>Os operadores lógicos dão mais possibilidades</p>
+		<ul>
+			<li> E (<span class="text-red">&&</span>) Verdadeiro se todas as expressões forem verdadeiras</li>
+			<li> E (<span class="text-red">||</span>) Verdadeiro se pelo menos uma das expressões for verdadeira</li>
+			<li> E (<span class="text-red">!</span>) Inverte o resultado da comparação</li>
 		</ul>
 	</div>
-	
 
 </body>
 </html>

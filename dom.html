@@ -10,20 +10,125 @@
 		.azul{
 			color: blue;
 		}
+
+		.estilo2{ background: black; padding: 10px; color: white; font-weight: bold; }
+		.estilo1{  padding: 10px;}
 	</style>
 </head>
 <body>
-
-	<h1>DOM - Document Object Model</h1>
 	
-	<ul>
-		<li class="red"><span class="azul">gelElementById()</span> Seleciona o elemento pelo Id</li>
-		<li class="red"><span class="azul">gelElementsByTagName():</span> Seleciona o elemento pelo Id</li>
-		<li class="red"><span class="azul">gelElementsByClassName():</span> Seleciona o elemento pelo Id</li>
-		<li class="red"><span class="azul">gelElementsByName():</span>    Seleciona o elemento pelo Id</li>	
-	</ul>
+  <div id="container">
 
-	<input type="text" name="nome" class="botao" id="nome_usuario" placeholder="digite seu nome" >
+	  	<h1>DOM - Document Object Model</h1>
+
+	  	<p>Em js usamos o DOM para manipolar elementos da tela, movimentar, esconder, fazer lógica para saber a ordem deles, etc.</p>
+	  	<hr>
+
+		<h3>Selecionando elementos</h3>
+		<p>As quatro maneiras de selecionar um elemento mais comuns e que com certeza você vai usar, são:</p>
+		<ul>
+			<li class="red"><span class="azul">getElementById()</span> Seleciona o elemento pelo Id</li>
+			<li class="red"><span class="azul">getElementsByTagName():</span> Seleciona o elemento pelo Id</li>
+			<li class="red"><span class="azul">getElementsByClassName():</span> Seleciona o elemento pelo Id</li>
+			<li class="red"><span class="azul">getElementsByName():</span>    Seleciona o elemento pelo Id</li>	
+		</ul>
+
+		<h3>Recuperando valores dos elementos</h3>
+		<ul>
+			<li><span class="azul">document.getElementById()<span class="text-purple">.value</span></span> Recupera o valor do elemento, em input, recupera o valor digitado, por exemplo</li>
+			<li><span class="azul">document.getElementById()<span class="text-purple">.style.background</span></span> Recupera a propriedade background (poder usar outras propriedades)</li>
+			<li><a href="w3schools.com/jsref/dom_obj_style.asp"></a>Link com varias possibilidades de como usar o style</li>
+		</ul>
+		<p>O botão abaixo é selecionado de todas as maneira acima, veja o código</p>
+		<script>
+			getElementById('nome_usuario')
+			getElementsByTagName('input')
+			getElementsByClassName('botao')
+			getElementsByName('nome')
+		</script>
+
+		<input type="text" name="nome" class="botao" id="nome_usuario" placeholder="digite seu nome" >
+
+		<hr>
+		<div>
+			<h3>Manipulando Inputs</h3>
+			<p>ver se o valor digitado no input de texto é letra ou numero e coloca-lo no lugar dele</p>
+
+			<input id="entrada" type="text" placeholder="Digite um caracter aqui" onkeyup="letraOuNumero()"><hr>
+
+			<span>Letras: </span><input id="letras" type="text" disabled="disabled">
+			<span>Numeros: </span><input id="numeros" type="text" disabled="disabled">
+
+			<script>
+				
+				function letraOuNumero(){
+					// Selecionar o valor digitado
+					var caracter = document.getElementById('entrada').value
+					// Limpar o campo de digitação
+					document.getElementById('entrada').value = ''
+					console.log(caracter)
+
+					// limpar espaços nas estremidades da string, assim, se ele digitar espaço não haverá problemas
+
+					caracter.trim()
+
+					switch(caracter){
+						// não comparar com number, já que a entrada retorna string
+						case '0':
+						case '1':
+						case '2':
+						case '3':
+						case '4':
+						case '5':
+						case '6':
+						case '7':
+						case '8':
+						case '9':
+						// adicionar o caracter no campo de numero
+						document.getElementById('numeros').value += caracter
+						break;
+						default:
+						document.getElementById('letras').value += caracter
+					}
+				}
+
+			</script>
+		</div>
+		<hr>
+		<div>
+			<h3>Manipulando estilos</h3>
+			<p>Com a manipulação de estilos podemos aplicar varias animações visuais, como por exemplo aumentar um menu ou um tótipo quando clicado</p>
+
+			<button id="blue" onclick="modificaCor('#0000FF', '300px', '300px')">Blue</button>
+			<button id="red" onclick="modificaCor('#FF0000', '200px', '200px')">Red</button>
+			<button id="green" onclick="modificaCor('#00FF00','150px','150px')">Green</button>
+			<hr>
+			<div id="caixa" class="caixa01"></div>
+
+			<script>
+				function modificaCor(corDeFundo, l, a){
+					document.getElementById('caixa').style.background = corDeFundo
+					document.getElementById('caixa').style.height = a
+					document.getElementById('caixa').style.width = l
+				}
+			</script>
+		</div>
+		<hr>
+		<div>
+			<h3>Manipulando Class</h3>
+			<button onclick="mudaClass()">Muda Class</button>
+			<div id="manipulandoClasses" class="estilo1 caixa01">
+				<p>Essa novinha tem onlyfans tananananann nanananna nananna</p>
+			</div>
+			<script>
+				function mudaClass(){
+					document.getElementById('manipulandoClasses').className = 'caixa01 estilo2'
+				}
+			</script>
+		</div>
+	  	
+  </div>
+
 </body>
 <script>
 	

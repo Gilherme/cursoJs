@@ -4,56 +4,64 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="cssExterno.css">
-	<title>Curso de JavaScript</title>
+	<title>Curso de JavaScript - variaveis</title>
 </head>
 
 <body>
 
-	<h1>Curso de Js</h1>
-	<ul>
-		<li><a href="eventos.html">Eventos</a></li>
-		<li><a href="dom.html">DOM</a></li>
-		<li><a href="desafio.html">desafio abc</a></li>
-		<li><a href="ifElse.html">if else</a></li>
-	</ul>
-	<div>
-		<h3>Funções nativas que ajudam</h3>
+	<div id="container">	
+		<h1>Curso de Js</h1>
 		<ul>
-			<li><span class="codigo">alert('texto')</span> Exibe um PoupUp</li>
-			<li><span class="codigo">prompt('texto')</span> Exibe um PoupUp com uma caixa de texto</li>
-			<li><span class="codigo">document.write('texto') Exibe textos direto no body</span></li>
-		</ul>	
-	</div>
-
-	<hr>
-	<div>
-		<h3>Variaveis</h3>
-		<p> Variáveis funcionam como um repositório onde vc pode armazenar valores, dados, etc</p>
-		<p>Tipos de variáveis: <span class="codigo">string / number / boolean</span></p>
-
-		<h3>Regras de declaração:</h3>
-		<ul>
-			<li>Iniciadas apenas com letras ou _</li>
-			<li>Não podem ter caracteres especiais</li>
-			<li>Não podem ser iguais as palavras reservadas da linguagem</li>
-			<li>Varáveis são case sensitive</li>
+			<li><a href="eventos.html">Eventos</a></li>
+			<li><a href="dom.html">DOM</a></li>
+			<li><a href="desafio.html">desafio abc</a></li>
+			<li><a href="ifElse.html">if else</a></li>
+			<li><a href="operadores.html">Operadores</a></li>
 		</ul>
+		<div>
+			<h3>Funções nativas que ajudam</h3>
+			<ul>
+				<li><span class="codigo">alert('texto')</span> Exibe um PoupUp</li>
+				<li><span class="codigo">prompt('texto')</span> Exibe um PoupUp com uma caixa de texto</li>
+				<li><span class="codigo">document.write('texto') Exibe textos direto no body</span></li>
+			</ul>	
+		</div>
 
-		<h3>Declaração:</h3>
+		<hr>
+		<div>
+			<h3>Variaveis</h3>
+			<p> Variáveis funcionam como um repositório onde vc pode armazenar valores, dados, etc</p>
+			<p>Tipos de variáveis: <span class="codigo">string / number / boolean</span></p>
 
-		<p>A declaração começa com a palavra reservada <span class="codigo">var</span> seguida pelo nome da variável depois o sinal de = (igual) seguido pelo valor que deseja atribuir a variável, como abaixo</p>
-		<p><span class="codigo">var</span> <span class="textoblue">SenhaDoPc</span> <span class="textored">=</span><span class="textopurple"> 56155</span> </p>
-	</div>
+			<h3>Regras de declaração:</h3>
+			<ul>
+				<li>Iniciadas apenas com letras ou _</li>
+				<li>Não podem ter caracteres especiais</li>
+				<li>Não podem ser iguais as palavras reservadas da linguagem</li>
+				<li>Varáveis são case sensitive</li>
+			</ul>
 
-	<div>
-		<h3>Concatenação</h3>
-		<p>Usando variavéis e possivel combinalas (concatenar) com outros blocos de código, string, etc
-		Com esse recurso torna-se uma frase dinamica, como no exemplo abaixo, Para ver acontecendo tire o comentario da variavel nome no código</p>
+			<h3>Declaração:</h3>
+
+			<p>A declaração começa com a palavra reservada <span class="codigo">var</span> seguida pelo nome da variável depois o sinal de = (igual) seguido pelo valor que deseja atribuir a variável, como abaixo</p>
+			<p><span class="codigo">var</span> <span class="textoblue">SenhaDoPc</span> <span class="textored">=</span><span class="textopurple"> 56155</span> </p>
+		</div>
+
+		<div>
+			<h3>Concatenação</h3>
+			<p>Usando variavéis e possivel combinalas (concatenar) com outros blocos de código, string, etc</p>
+			<p>Para concatenar uma frase com uma variavel usamos o operador +</p>
+			<p>Por exemplo <span class="text-blue">document.write</span>(<span class="text-orange">'Olá '</span> + <span class="text-blue">nome</span> + <span class="text-orange">' Estamos felizes em ter você aqui'</span>) </p>
+			<p>No exemplo acima usamos uma das <a href="funcoesNativas">Funções Nativas </a> <span class="text-blue">document.write</span>() Para imprimir no body uma saudação com o nome dinamico, assim, quando a pagina reconhecer o usuario, a variavel 'nome' passa a ser automaticamente o nome dele</p>
+
+			<p>IMPORTANTE - Se tentarmos somar duas strings numericas, por exemplo, </a> <span class="text-blue">document.write</span>( <span class="text-orange">'20'</span> + <span class="text-orange">'50'</span>) o resultado impresso será 2050, ou seja, ele irá concatenar os numeros </p>
+			<p>Usando a Função nativa alteramos o valor numerico no formato string para o formato number</p>
+		</div>
 
 		<script>
 			/*var nome = prompt('Digite seu nome aqui');
 */
-			document.write('Olá ' + nome + ' Estamos felizes em ter você aqui')
+			
 		</script>
 	</div>
 	
