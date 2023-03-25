@@ -41,4 +41,4 @@ const soma = function(a, b){
 }
 soma(2, 3)(4) //ou
 const cincoMais = soma(2, 3)
-cincoMais(4)
+cincoMais(4 )
