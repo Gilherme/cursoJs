@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+.container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+}
+.card{
+  background-color: #fff8;
+  padding: 2rem;
+  border-radius: 0.7rem;
+  box-shadow: 3px 3px 1px 0 #0005;
+}
+div.card h1{
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: #600395;
+}
+div.label-float input{
+  width: 100%;
+  padding: 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid #600395;
+  background-color: transparent;
+  outline:none;                             /*tira a borda que é ativada o clicar*/
+  min-width: 250px;
+  font-size: 16px;
+  transition: all .2s ease-out;
+  border-radius: 0;
+}
+div.label-float input:focus{       /* Quando ele tiver ou mudar o foco*/
+  border-bottom: 2px solid #bf58fa;
+}
+
+div.label-float label{
+  color: #600395;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0.8rem;
+  transition: all .2s ease-out;
+
+}
+.label-float{
+  position: relative;
+  padding-top: 0.7rem;
+  margin-block: 5%;
+}
+div.label-float input:focus + label,
+div.label-float input:valid + label{   /*para o label ficar em cima caso algo for digitado*/
+  font-size: 0.8rem;
+  margin-top: 0px;
+}
+button.cadastrar{
+  background-color: transparent;
+  border-color: #600395;
+  color: #600395;
+  padding: 0.4rem;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  cursor:  pointer;
+  outline: none;
+}
+button.cadastrar:hover{
+  background-color: #600395;
+  color:#fff;
+  transition: all .2s ease-out;
+}
+.justify-center{
+  display: flex;
+  justify-content: center;
+}
+.fa-eye{
+  position: absolute;
+  top: 0.7rem;
+  right: 0.6rem;
+  cursor: pointer;
+  color: #600395;
+}
+#msgErro{
+  text-align: center;
+  color: #0009;
+  background-color: #ff000040;
+  padding: 0.6rem;
+  border-radius: 4px;
+  display: none;
+  font-weight: 500;
+}
+#msgSucesso{
+  text-align: center;
+  color: #0009;
+  background-color: #00800040;
+  padding: 0.6rem;
+  border-radius: 4px;
+  display: none;
+  font-weight: 500;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <h1>Cadastrar</h1>
+      <div id="msgErro"></div>
+      <div id="msgSucesso"></div>
+      <div class="label-float">
+        <input type="text" id="nome" placeholder="" required>
+        <label id="labelNome" for="none">Nome</label>
+      </div>
+
+      <div class="label-float">
+        <input type="text" id="email" placeholder="" required>
+        <label id="labelEmail" for="email">Email</label>
+      </div>
+
+      <div class="label-float">
+        <input type="text" id="usuario" placeholder="" required>
+        <label id="labelUsuario" for="usuario">Usuario</label>
+      </div>
+
+      <div class="label-float">
+        <input type="password" id="senha" placeholder="" required>
+        <label id="labelSenha" for="senha">Senha</label>
+        <i class="fa fa-eye" aria-hidden="true"></i>
+      </div>
+
+      <div class="justify-center">
+        <button onclick="cadastrar()" class="cadastrar">cadastre-se</button>
+      </div>
+
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
