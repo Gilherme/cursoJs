@@ -3,4 +3,4 @@
 // para faze-la colocamos ela entre () e chamamos logo depois com (), Exemplo abaixo
 (function eae(){
   console.log('EAEEEE PESSOAAAAL!!!!')
-})()
+})( )
