@@ -6,4 +6,6 @@
 // “Delta é negativo”.
 
 
-// Revisar a formula de Bhaskara antes de prosseguir 
+function bhaskara(ax2, bx, c){
+  
+}

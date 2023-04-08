@@ -15,5 +15,9 @@ console.log(potenciacao(2,3))
 function potencia(base, expoente){
   return Math.pow(base, expoente)
 }
-
 console.log(potencia(2, 3))
+
+// OU 
+let pow = (x, y) => x ** y 
+
+console.log(pow(2, 3))
