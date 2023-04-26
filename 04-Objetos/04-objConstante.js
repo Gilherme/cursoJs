@@ -17,4 +17,3 @@ pessoa.endereco = 'Rua abc'
 
 // não gera erro, mas depois de usar o freeze, nenhuma alteração é aceita 
 console.log(pessoa.nome)
-
