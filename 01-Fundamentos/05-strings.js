@@ -27,3 +27,7 @@ console.log(` - esse é um tamplate string
  // Funções 
  const up = texto => texto.toUpperCase()
  console.log(`Ei... ${up('cuidado')}!!`)
+
+ const stringf = 'ola.como.vai.vc';
+const s = stringf.replace(/\./g, ' ');
+console.log(s); // Exibe "ola como vai vc"
