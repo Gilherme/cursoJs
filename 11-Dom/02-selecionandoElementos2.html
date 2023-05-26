@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <script>              
+    // Query selector retorna um node list, da pra fazer um forEach mas só isso
+    // se quiser fazer um map ou um filter precisa transformar em array
+        document.querySelector('#primeiro').classList.add('destaque')
+
+        // função para adicionar a classe automaticamente 
+        const selecionar = seletor => 
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+        const desSelecionar = seletor => 
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
+
+        selecionar('div')
+        desSelecionar('*') // de todas as tags 
+
+        selecionar('.terceiro.ultimo')  // só quem tem as duas classes 
+        desSelecionar('*')
+
+        selecionar(':not(#primeiro)') // todos menos o com id #primeiro
+        desSelecionar('*')
+
+        selecionar(':nth-child(1)') // todos os primeiros elementos filhos
+        desSelecionar('*')
+
+        selecionar('div:nth-of-type(1)') // apenas os primeiros filhos de elementos que forem div
+        desSelecionar('*')
+    
+        selecionar('[wb-attrib]')  // selecionar atributos 
+
+    </script>
+</body>
+</html>

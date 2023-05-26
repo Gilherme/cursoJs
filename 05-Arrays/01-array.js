@@ -12,7 +12,7 @@ console.log(aprovados[2])
 console.log(aprovados[3]) // Um índice inexistente retorna undefined
 
 aprovados['3'] = 'Donatello' //Uma maneira de adicionar ou editar um índice de um array já declarado
-aprovados.push('Arya')       // Melhor maneira de adicionar, add no fim do array 
+aprovados.push('Arya')       // Melhor maneira de adicionar, (no fim do array) 
 console.log(aprovados.length)// length retorna a quantidade de elementos em um array
 
 aprovados['9'] = 'Rapha'     //Todos os indices do 4 ao 8 vão ficar em branco e na chamada do

@@ -16,6 +16,6 @@ function imprimirNomeMaiusculo(nomes){
 }
 
 // coloquei "name" para foeçar o erro
-const nomes = {name: 'Carlos' }
+const nomes = {nome: 'Carlos' }
 
 imprimirNomeMaiusculo(nomes)

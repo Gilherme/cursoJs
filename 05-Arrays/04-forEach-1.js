@@ -9,5 +9,5 @@ aprovados.forEach(function(nome, indice){ // 3 parametros default que é nome, i
 aprovados.forEach(nome => console.log(nome))
 
 //  armazenando em uma variavel para depois chamar 
-const exibirAprovados = (nome, indice) => {console.log(indice, nome,)}
+const exibirAprovados = (nome, indice) => console.log(indice, nome,)
 aprovados.forEach(exibirAprovados)
